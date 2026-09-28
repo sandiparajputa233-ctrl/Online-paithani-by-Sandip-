@@ -1,0 +1,69 @@
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--maroon:#7d1830;--gold:#c99a32;--cream:#fff8ed;--dark:#24151a;--muted:#6f6265}
+html{scroll-behavior:smooth}
+body{font-family:Arial,"Noto Sans Devanagari",sans-serif;color:var(--dark);background:#fff}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+.header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);border-bottom:1px solid #eee}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:20px;font-weight:800;color:var(--dark)}
+.logo span{color:var(--maroon)}
+nav{display:flex;gap:26px;font-weight:600}
+nav a:hover{color:var(--maroon)}
+.menu-btn{display:none;background:none;border:0;font-size:28px}
+.hero{background:linear-gradient(135deg,#fff8ed 0%,#f7e8dc 100%);padding:80px 0}
+.hero-content{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:55px}
+.eyebrow{text-transform:uppercase;letter-spacing:2px;color:var(--gold);font-size:13px;font-weight:800;margin-bottom:12px}
+h1{font-size:clamp(42px,6vw,72px);line-height:1.05;margin-bottom:20px}
+h1 span,h2{color:var(--maroon)}
+.hero-text{font-size:18px;line-height:1.7;color:var(--muted);max-width:650px}
+.buttons{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 22px;border-radius:30px;font-weight:800}
+.primary{background:var(--maroon);color:white}
+.outline{border:2px solid var(--maroon);color:var(--maroon)}
+.light{background:white;color:var(--maroon)}
+.hero-card{background:white;border-radius:28px;padding:18px;text-align:center;box-shadow:0 20px 50px #7d18301a}
+.hero-placeholder,.product-img{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#f4d5b7,#fff0dc);border-radius:20px}
+.hero-placeholder{height:360px;font-size:130px}
+.hero-card p{padding:15px 5px;color:var(--muted)}
+.section{padding:80px 0}
+.section-title{text-align:center;margin-bottom:42px}
+.section-title h2,.about h2{font-size:42px;margin-bottom:12px}
+.section-title p:last-child{color:var(--muted)}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.product{border:1px solid #eee;border-radius:22px;overflow:hidden;background:white;box-shadow:0 10px 30px #0000000a}
+.product-img{height:300px;font-size:95px;border-radius:0}
+.product-info{padding:22px}
+.tag{font-size:11px;color:var(--maroon);background:#f8e8e6;padding:6px 10px;border-radius:20px;font-weight:800}
+.product h3{font-size:23px;margin:16px 0 7px}
+.price{font-size:24px;font-weight:900;color:var(--maroon);margin-bottom:18px}
+.order-btn{width:100%;border:0;background:var(--maroon);color:white;padding:13px;border-radius:10px;font-weight:800;cursor:pointer}
+.offer-section{background:var(--maroon);color:white;padding:58px 0}
+.offer{display:flex;justify-content:space-between;align-items:center;gap:30px}
+.offer h2{color:white;font-size:40px;margin-bottom:12px}
+.offer p:not(.eyebrow){color:#f8e8e6;line-height:1.6}
+.about{background:var(--cream)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about h2{margin-bottom:18px}
+.about p:not(.eyebrow){line-height:1.8;color:var(--muted);font-size:17px}
+.about-box{display:flex;flex-direction:column;gap:15px;background:white;padding:30px;border-radius:22px;box-shadow:0 12px 35px #0000000a}
+.about-box strong{font-size:23px;color:var(--maroon)}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.contact-card{border:1px solid #eee;border-radius:18px;padding:28px;text-align:center;display:flex;flex-direction:column;gap:8px;font-size:32px}
+.contact-card span{font-size:20px;font-weight:800}
+.contact-card small{font-size:14px;color:var(--muted)}
+footer{background:#24151a;color:#eee;padding:25px 0}
+.footer{display:flex;justify-content:space-between;gap:15px;font-size:13px}
+@media(max-width:760px){
+  .menu-btn{display:block}
+  nav{display:none;position:absolute;top:72px;left:0;width:100%;background:white;padding:20px;flex-direction:column;gap:18px;border-bottom:1px solid #eee}
+  nav.open{display:flex}
+  .hero{padding:55px 0}
+  .hero-content,.about-grid{grid-template-columns:1fr}
+  .hero-card{order:-1}
+  .hero-placeholder{height:250px}
+  .products,.contact-grid{grid-template-columns:1fr}
+  .offer{flex-direction:column;align-items:flex-start}
+  .offer h2,.section-title h2{font-size:32px}
+  .footer{flex-direction:column}
+}
